@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="GuidePageView" customClass="GuidePageView" customModule="onboarding" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="gpV-9X-nFD" id="CXm-dl-LGh"/>
+                <outlet property="nextButton" destination="Or2-iN-wvt" id="mWI-n1-6sh"/>
+                <outlet property="pageControl" destination="NNm-vf-TN3" id="tck-X8-dsd"/>
+                <outlet property="scrollView" destination="sWW-h0-GQq" id="Fvm-br-Z9U"/>
+                <outlet property="subLabel" destination="YNk-G2-dGE" id="WNB-Ux-qFJ"/>
+                <outlet property="titleLabel" destination="Cr2-xG-j6b" id="Hab-bi-ejK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPg-cM-dVk" userLabel="gradationView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.066660635169999996" green="0.066670835019999999" blue="0.066652119159999995" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWW-h0-GQq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Koj-p1-S3y"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="afE-WO-rmA"/>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-Se-Vv9">
+                    <rect key="frame" x="68.5" y="248.5" width="238" height="170.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-aa-F9I">
+                            <rect key="frame" x="0.0" y="0.0" width="238" height="72.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="간편한 방송 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr2-xG-j6b">
+                                    <rect key="frame" x="34.5" y="0.0" width="169" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                    <color key="textColor" red="0.9997170568" green="0.88688570259999999" blue="0.30374991890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNk-G2-dGE">
+                                    <rect key="frame" x="0.0" y="31.5" width="238" height="41"/>
+                                    <string key="text">모바일 방송 송출시 필요한 기능들은
+퀵버튼으로 설정 하실 수 있습니다.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GlA-ZF-2gh">
+                            <rect key="frame" x="37.5" y="92.5" width="163" height="78"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-iN-wvt">
+                                    <rect key="frame" x="0.0" y="0.0" width="163" height="50"/>
+                                    <color key="backgroundColor" red="0.9997170568" green="0.88688570259999999" blue="0.30374991890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="163" id="4AD-qh-Rrn"/>
+                                        <constraint firstAttribute="height" constant="50" id="KMX-DN-mYm"/>
+                                    </constraints>
+                                    <state key="normal" title="다음 보기">
+                                        <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNm-vf-TN3" customClass="CHIPageControlChimayo" customModule="CHIPageControl">
+                                    <rect key="frame" x="39.5" y="66" width="84" height="12"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="84" id="aKL-k7-12w"/>
+                                        <constraint firstAttribute="height" constant="12" id="zSI-KT-OR1"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpV-9X-nFD">
+                    <rect key="frame" x="20" y="20" width="130" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="1HD-Bf-b2D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="더 이상 보지 않기" image="iconCloseWhSm"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="anu-9w-fYp"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gpV-9X-nFD" firstAttribute="top" secondItem="anu-9w-fYp" secondAttribute="top" constant="20" id="0by-Id-tij"/>
+                <constraint firstItem="gpV-9X-nFD" firstAttribute="leading" secondItem="anu-9w-fYp" secondAttribute="leading" constant="20" id="0x7-SB-vFz"/>
+                <constraint firstItem="J7p-Se-Vv9" firstAttribute="centerX" secondItem="anu-9w-fYp" secondAttribute="centerX" id="9Dl-2M-Iei"/>
+                <constraint firstItem="anu-9w-fYp" firstAttribute="trailing" secondItem="cPg-cM-dVk" secondAttribute="trailing" id="RJI-Lh-3tM"/>
+                <constraint firstItem="anu-9w-fYp" firstAttribute="bottom" secondItem="cPg-cM-dVk" secondAttribute="bottom" id="YDX-0t-9is"/>
+                <constraint firstItem="J7p-Se-Vv9" firstAttribute="centerY" secondItem="anu-9w-fYp" secondAttribute="centerY" id="ZiB-n8-Zaw"/>
+                <constraint firstItem="cPg-cM-dVk" firstAttribute="leading" secondItem="anu-9w-fYp" secondAttribute="leading" id="j18-SQ-IWA"/>
+                <constraint firstItem="cPg-cM-dVk" firstAttribute="top" secondItem="anu-9w-fYp" secondAttribute="top" id="qzp-f3-9Ir"/>
+            </constraints>
+            <point key="canvasLocation" x="-298.39999999999998" y="28.335832083958024"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconCloseWhSm" width="20" height="20"/>
+    </resources>
+</document>
