@@ -1,5 +1,5 @@
 //
-//  streamOnboardingView.swift
+//  StreamOnboardingView.swift
 //  ShallWeShop
 //
 //  Created by Inpyo Hong on 2020/07/22.
@@ -9,7 +9,7 @@
 import UIKit
 import CHIPageControl
 
-class GuidePageView: UIView {
+class StreamOnboardingView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
@@ -28,8 +28,8 @@ class GuidePageView: UIView {
     }
 
     func commonInit() {
-      let bundle = Bundle.init(for: GuidePageView.self)
-      if let viewsToAdd = bundle.loadNibNamed("GuidePageView", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
+      let bundle = Bundle.init(for: StreamOnboardingView.self)
+      if let viewsToAdd = bundle.loadNibNamed("StreamOnboardingView", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

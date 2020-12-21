@@ -9,8 +9,7 @@ import UIKit
 import CHIPageControl
 
 class ViewController: UIViewController {
-    @IBOutlet weak var guidePageView: GuidePageView!
-    
+    @IBOutlet weak var streamOnboardingView: StreamOnboardingView!
 
     var guidePageNum: Int = 4
     
@@ -20,10 +19,10 @@ class ViewController: UIViewController {
     }
 
     func configGuideView() {
-        guidePageView.pageControl.tintColor = UIColor(white: 170.0 / 255.0, alpha: 1.0)
-        guidePageView.pageControl.numberOfPages = guidePageNum
-        guidePageView.pageControl.delegate = self
-        guidePageView.scrollView.delegate = self
+        streamOnboardingView.pageControl.tintColor = UIColor(white: 170.0 / 255.0, alpha: 1.0)
+        streamOnboardingView.pageControl.numberOfPages = guidePageNum
+        streamOnboardingView.pageControl.delegate = self
+        streamOnboardingView.scrollView.delegate = self
         
         for index in 0..<guidePageNum {
             let subView = UIView()
@@ -37,17 +36,17 @@ class ViewController: UIViewController {
 //                        )
                         // subView의 x좌표를 기기의 너비 * index만큼 주어 각 페이지의 시작 x좌표를 설정
                         subView.frame.origin.x = UIScreen.main.bounds.width * CGFloat(index)
-            guidePageView.scrollView.addSubview(subView)
+            streamOnboardingView.scrollView.addSubview(subView)
         }
         // scrollView에서 페이징이 가능하도록 설정
-        guidePageView.scrollView.isPagingEnabled = true
+        streamOnboardingView.scrollView.isPagingEnabled = true
         // scrollView의 contentSize를 5 페이지 만큼으로 설정
-        guidePageView.scrollView.contentSize = CGSize(
+        streamOnboardingView.scrollView.contentSize = CGSize(
             width: UIScreen.main.bounds.width * CGFloat(guidePageNum),
             height: UIScreen.main.bounds.height
         )
-        guidePageView.scrollView.alwaysBounceVertical = false // 수직 스크롤 바운스 안되게 설정
-        guidePageView.scrollView.bounces = false
+        streamOnboardingView.scrollView.alwaysBounceVertical = false // 수직 스크롤 바운스 안되게 설정
+        streamOnboardingView.scrollView.bounces = false
     }
 }
 
@@ -58,7 +57,7 @@ extension ViewController: UIScrollViewDelegate {
 
         //페이징 스크롤이 완전히 끝나야 페이지 인덱스가 바뀜
         if (currentOffset.truncatingRemainder(dividingBy: UIScreen.main.bounds.width) == 0) {
-            guidePageView.pageControl.set(progress: Int(index), animated: true)
+            streamOnboardingView.pageControl.set(progress: Int(index), animated: true)
         }
         
         //페이지의 경계를 기준으로 가까운 뷰의 인덱스로 바뀜

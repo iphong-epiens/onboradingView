@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="GuidePageView" customClass="GuidePageView" customModule="onboarding" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="StreamOnboardingView" customClass="StreamOnboardingView" customModule="onboarding" customModuleProvider="target">
             <connections>
                 <outlet property="closeButton" destination="gpV-9X-nFD" id="CXm-dl-LGh"/>
                 <outlet property="nextButton" destination="Or2-iN-wvt" id="mWI-n1-6sh"/>
